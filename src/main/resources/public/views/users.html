@@ -1,0 +1,24 @@
+<div class="container pad-top">
+     <table class="table users">
+        <tr>
+            <td><h3>All Users</h3></td>
+            <td></td>
+        </tr>
+         <tr>
+             <th>User Name</th>
+             <th>First Name</th>
+             <th>Second Name</th>
+             <th>Email</th>
+             <th>Cell Phone</th>
+             <th>Birthdate</th>
+         </tr>
+        <tr ng-repeat="user in users">
+            <td>{{user.login}}</td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.secondName}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phoneNumber}}</td>
+            <td>{{user.birthdate | date:'medium'}}</td>
+        </tr>
+    </table>
+</div>

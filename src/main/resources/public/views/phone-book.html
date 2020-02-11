@@ -1,0 +1,11 @@
+<div class="container pad-top" id="phoneBook">
+    <div>
+        <input type="text" ng-model="searchterm" /><button ng-click="search(searchterm)">Search</button>
+    </div>
+    <div>
+        <div ui-grid="gridOptions" class="grid" ui-grid-pagination></div>
+    </div>
+    <div class="">
+        <input type="button" class="btn btn-primary pull-left" value="Add Contact" ng-click="addContact()"/>
+    </div>
+</div>

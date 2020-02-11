@@ -1,0 +1,43 @@
+<div class="container pad-top">
+    <table class="table usertable">
+        <tr>
+            <td><h3>Details for {{user.login}}</h3></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>{{user.login}}</td>
+        </tr>
+        <tr>
+            <td>First Name</td>
+            <td>{{user.firstName}}</td>
+        </tr>
+        <tr>
+            <td>Second Name</td>
+            <td>{{user.secondName}}</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>{{user.email}}</td>
+        </tr>
+        <tr>
+            <td>Phone number</td>
+            <td>{{user.phoneNumber}}</td>
+        </tr>
+        <tr>
+            <td>Birth Day</td>
+            <td>{{user.birthdate | date:'medium'}}</td>
+        </tr>
+    </table>
+    <h4>Disconnect account.</h4>
+    <div class="col-sm-12" ng-if="isFbConnected">
+        <form action="/connect/facebook" method="POST">
+            <input type="hidden" name="scope" value="DELETE" />
+            <input type="submit" value="Disconnect facebook" class="btn btn-primary" />
+        </form>
+    </div>
+    <br>
+    <div>
+        <a class="btn btn-primary" ui-sref="editUser">Edit</a>
+    </div>
+</div>
